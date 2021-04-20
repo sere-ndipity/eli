@@ -1,0 +1,42 @@
+body{
+    min-width: 200px;
+    min-height: 160px;
+    background-color: rgb(218, 162, 240);
+};
+hr{
+    height:2px;
+    border-width:0;
+    color:rgb(0, 0, 0);
+    background-color:black;
+}
+h1{
+    font-family: 'Dancing Script', cursive;
+    animation-name: spin;
+    animation-duration: 1.2s;
+    animation-iteration-count: 1;
+}
+h3{
+    font-family: 'Quicksand', sans-serif;
+}
+.font{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+}
+@keyframes spin{
+    0%{
+        transform :rotate(0deg);
+        left:50px;
+        top:0px;
+    }
+    50%{
+        transform: rotate(360deg);
+        left:20px;
+        top:0px;
+    }
+    100%{
+        tranform: rotate(720deg);
+        left:40px;
+        top:0px;
+    }
+}
