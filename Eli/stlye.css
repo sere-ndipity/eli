@@ -4,11 +4,12 @@ body{
     background-color: rgb(218, 162, 240);
 };
 hr{
-    height:2px;
-    border-width:0;
+    height:4px;
+    border-width:5;
     color:rgb(0, 0, 0);
     background-color:black;
 }
+
 h1{
     font-family: 'Dancing Script', cursive;
     animation-name: spin;
@@ -18,6 +19,7 @@ h1{
 h3{
     font-family: 'Quicksand', sans-serif;
 }
+
 .font{
     font-family: 'Quicksand', sans-serif;
     font-weight: 100;
@@ -40,3 +42,22 @@ h3{
         top:0px;
     }
 }
+
+
+.set_button{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 20px;
+    background-color:rgb(158, 99, 226);
+    color:white;
+
+}
+.lang_button{
+    border-radius: 20px;
+    height:18px;
+    width:19px;
+}
+
+
+
