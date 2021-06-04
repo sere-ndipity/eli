@@ -1,32 +1,73 @@
 $(function(){
 
-    chrome.storage.sync.get('speak_rate',function(eli){
-        $('#rate_value').text(eli.speak_rate);
-        $('#rate_slider').val(eli.speak_rate);
-    });
+    localStorage.setItem('speed',1);
+    localStorage.setItem('leang','en-GB')  // UK English
 
-    var slider = document.getElementById("rate_slider");
-    var output = document.getElementById("rate_value");
-    output.innerHTML = slider.value;
+
+   var slider = document.getElementById("rate_slider");
+   var output = document.getElementById("rate_value");
+   output.innerHTML = slider.value;
 
 
     rate_slider.oninput = function() {
         output.innerHTML = this.value;
       };
 
-    chrome.storage.sync.set({'speak_rate':slider.value},function(eli){
-
-        var check = $("#rate_value").val();
-
-        if(check!=eli.speak_rate ){
-            $("#rate_value").val(store_rate);
-
-        }
+      
 
 
-    });
-    
-    chorme.runtime.sendMessage({change_rate:slider.value});
-    
+      $("#Submit_change").click(function(){
+        var change_rate = parseInt(document.getElementById("rate_value").innerHTML);
 
-})
+          console.log("submit clicked");
+           localStorage.setItem('speed',change_rate);
+        
+      });
+
+      $("#usa").click(function(){
+        var new_lang = "en-US";
+        localStorage.setItem('lang',new_lang);
+      });
+
+      $("#spain").click(function(){
+        var new_lang = "es-ES";
+        localStorage.setItem('lang',new_lang);
+      });
+
+      $("#uk").click(function(){
+        var new_lang = "en-GB";
+        localStorage.setItem('lang',new_lang);
+      });
+
+      $("#india").click(function(){
+        var new_lang = "hi-IN";
+        localStorage.setItem('lang',new_lang);
+      });
+
+      $("#japan").click(function(){
+        var new_lang = "ja-JP";
+        localStorage.setItem('lang',new_lang);
+      });
+
+      $("#france").click(function(){
+        var new_lang = "fr-FR";
+        localStorage.setItem('lang',new_lang);
+      });
+
+      $("#italy").click(function(){
+        var new_lang = "it-IT";
+        localStorage.setItem('lang',new_lang);
+      });
+
+      $("#german").click(function(){
+        var new_lang = "de-DE";
+        localStorage.setItem('lang',new_lang);
+      });
+
+      $("#korea").click(function(){
+        var new_lang = "ko-KR";
+        localStorage.setItem('lang',new_lang);
+      });
+
+
+});
